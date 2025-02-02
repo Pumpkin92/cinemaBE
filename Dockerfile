@@ -1,3 +1,6 @@
 FROM openjdk:17-jdk
-COPY target/cinema-project.jar app.jar
+WORKDIR /app
+COPY target/cinema-project-0.0.1-SNAPSHOT.jar.jar
+EXPOSE 8081
 ENTRYPOINT ["java", "-jar", "/app.jar"]
+
